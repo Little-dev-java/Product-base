@@ -10,10 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-// hi
-
 @Service
 public class ProductService {
+
     @Autowired
     private ProductRepo repository;
 

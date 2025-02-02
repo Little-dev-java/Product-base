@@ -2,18 +2,13 @@ package org.example.project.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import java.util.Collection;
 import java.util.Collections;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "Users")
 public class User implements UserDetails {
 
@@ -70,9 +65,5 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    public int getId() {
-        return id;
     }
 }

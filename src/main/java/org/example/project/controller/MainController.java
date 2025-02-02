@@ -27,7 +27,7 @@ public class MainController {
     public List<Product> getProducts() {
         return service.getProducts();
     }
-    @GetMapping("/product/{id}")
+    @GetMapping("/products/{id}")
     public Product getProduct(@PathVariable int id) throws ProductNotFoundEsception {
         return service.getProduct(id);
     }
@@ -55,5 +55,9 @@ public class MainController {
     public String register(@RequestBody User user) throws UserAlreadyExistException {
         userService.register(user);
         return "User registered";
+    }
+    @PostMapping("/login")
+    public String login(@RequestBody User user) {
+        return userService.verify(user);
     }
 }

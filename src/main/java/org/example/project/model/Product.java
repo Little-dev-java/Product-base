@@ -2,11 +2,8 @@ package org.example.project.model;
 
 
 import jakarta.persistence.*;
-import lombok.*;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "Products")
 public class Product {
 
